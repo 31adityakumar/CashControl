@@ -1,18 +1,20 @@
 {
   "name": "expense-management",
   "version": "1.0.0",
-  "description": "",
+  "description": "An expense management backend application",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "supervisor server.js ",
-    "build": "npm run build:clean && npm run build:compile"
+    "server": "supervisor server.js",
+    "build": "npm run build:clean && npm run build:compile",
+    "build:clean": "rimraf dist",
+    "build:compile": "babel . --out-dir dist --ignore node_modules,dist",
+    "dev": "concurrently \"npm run server\""
   },
   "author": "Aditya",
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",
-    "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
@@ -21,5 +23,17 @@
     "mongoose": "^8.5.3",
     "morgan": "^1.10.0",
     "supervisor": "^0.12.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "concurrently": "^8.2.2",
+    "rimraf": "^5.0.10"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
