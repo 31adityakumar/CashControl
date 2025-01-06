@@ -7,7 +7,7 @@
     "start": "node server.js",
     "server": "supervisor server.js "
   },
-  "author": "Ashutosh",
+  "author": "Aditya",
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",

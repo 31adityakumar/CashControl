@@ -19,24 +19,9 @@ app.use(morgan('dev'))
 app.use(express.json())
 app.use(cors());
 
-// app.use(cors({
-//     origin: 'https://cash-control-frontend.vercel.app', // Replace with your actual frontend URL
-//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-// }));
-
-
-
-
 // using routes
 app.use('/api/v1/users', require('./routes/userRoute'))
 app.use('/api/v1/transections', require('./routes/transectionRoutes'))
-
-
-// static files
-// app.use(express.static(path.join(__dirname, './client/build')))
-// app.get('*', function(req, res){
-//   res.sendFile(path.join(__dirname, './client/build/index.html'));
-// })
 
 // port
 const PORT = process.env.PORT || 8000;
