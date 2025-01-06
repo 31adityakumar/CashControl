@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "supervisor server.js "
+    "server": "supervisor server.js ",
+    "build": "npm run build:clean && npm run build:compile"
   },
   "author": "Aditya",
   "license": "ISC",
