@@ -1,15 +1,16 @@
 {
   "name": "expense-management",
   "version": "1.0.0",
-  "description": "An expense management backend application",
+  "description": "A backend application for managing expenses",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node dist/server.js",
     "server": "supervisor server.js",
     "build": "npm run build:clean && npm run build:compile",
     "build:clean": "rimraf dist",
     "build:compile": "babel . --out-dir dist --ignore node_modules,dist",
-    "dev": "concurrently \"npm run server\""
+    "dev": "concurrently \"npm run server\"",
+    "test": "echo \"No test specified\" && exit 1"
   },
   "author": "Aditya",
   "license": "ISC",
